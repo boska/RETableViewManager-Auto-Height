@@ -25,7 +25,7 @@
 
 #import "RETableViewCell.h"
 #import "RETableViewManager.h"
-
+#import <UITableView+FDTemplateLayoutCell.h>
 @interface RETableViewCell ()
 
 @property (assign, readwrite, nonatomic) BOOL loaded;
@@ -43,6 +43,12 @@
 
 + (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager
 {
+    if (item.cellHeight == UITableViewAutomaticDimension){
+        return [tableViewManager.tableView fd_heightForCellWithIdentifier:item.cellIdentifier configuration:^(RETableViewCell *cell) {
+            cell.item = item;
+            [cell cellWillAppear];
+        }];
+    }
     if ([item isKindOfClass:[RETableViewItem class]] && item.cellHeight > 0)
         return item.cellHeight;
     

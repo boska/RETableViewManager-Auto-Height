@@ -1,0 +1,5 @@
+#include "Pods-UITableView+FDTemplateLayoutCell.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/UITableView+FDTemplateLayoutCell" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/REFormattedNumberField" "${PODS_ROOT}/Headers/Public/RETableViewManager" "${PODS_ROOT}/Headers/Public/REValidation" "${PODS_ROOT}/Headers/Public/UITableView+FDTemplateLayoutCell"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

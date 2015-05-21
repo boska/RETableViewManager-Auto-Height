@@ -62,6 +62,10 @@
 		50359B2119D2BF8C00559B3E /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B1F19D2BF8C00559B3E /* Default-667h@2x.png */; };
 		50359B2219D2BF8C00559B3E /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B2019D2BF8C00559B3E /* Default-736h@3x.png */; };
 		53378ADE88FA40FD87184931 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA85FF11E7E458B98D5825C /* libPods.a */; };
+		8D5A7AB81B0DD4E70038CE09 /* ExampleAutoHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A7AB61B0DD4E70038CE09 /* ExampleAutoHeightCell.m */; };
+		8D5A7AB91B0DD4E70038CE09 /* ExampleAutoHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A7AB71B0DD4E70038CE09 /* ExampleAutoHeightCell.xib */; };
+		8D5A7ABC1B0DD5330038CE09 /* ExampleAutoHeightItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A7ABB1B0DD5330038CE09 /* ExampleAutoHeightItem.m */; };
+		8D5A7ABF1B0DD6AE0038CE09 /* DynamicHeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A7ABE1B0DD6AE0038CE09 /* DynamicHeightController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +145,13 @@
 		50359B1F19D2BF8C00559B3E /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		50359B2019D2BF8C00559B3E /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		5EA85FF11E7E458B98D5825C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5A7AB51B0DD4E70038CE09 /* ExampleAutoHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleAutoHeightCell.h; sourceTree = "<group>"; };
+		8D5A7AB61B0DD4E70038CE09 /* ExampleAutoHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleAutoHeightCell.m; sourceTree = "<group>"; };
+		8D5A7AB71B0DD4E70038CE09 /* ExampleAutoHeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleAutoHeightCell.xib; sourceTree = "<group>"; };
+		8D5A7ABA1B0DD5330038CE09 /* ExampleAutoHeightItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleAutoHeightItem.h; sourceTree = "<group>"; };
+		8D5A7ABB1B0DD5330038CE09 /* ExampleAutoHeightItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleAutoHeightItem.m; sourceTree = "<group>"; };
+		8D5A7ABD1B0DD6AE0038CE09 /* DynamicHeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicHeightController.h; sourceTree = "<group>"; };
+		8D5A7ABE1B0DD6AE0038CE09 /* DynamicHeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicHeightController.m; sourceTree = "<group>"; };
 		C93C8651600E6C213AA4EA2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +201,8 @@
 				30E5F50B17BBD163005CF1FE /* IndexedListViewController.m */,
 				30B00D7817C667A90010D439 /* ValidationsViewController.h */,
 				30B00D7917C667A90010D439 /* ValidationsViewController.m */,
+				8D5A7ABD1B0DD6AE0038CE09 /* DynamicHeightController.h */,
+				8D5A7ABE1B0DD6AE0038CE09 /* DynamicHeightController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +219,11 @@
 				303D966E17B7CD2F00A418F3 /* XIBTestCell.xib */,
 				30BB805617E0D8A400AD0861 /* MultilineTextCell.h */,
 				30BB805717E0D8A400AD0861 /* MultilineTextCell.m */,
+				8D5A7AB51B0DD4E70038CE09 /* ExampleAutoHeightCell.h */,
+				8D5A7AB61B0DD4E70038CE09 /* ExampleAutoHeightCell.m */,
+				8D5A7AB71B0DD4E70038CE09 /* ExampleAutoHeightCell.xib */,
+				8D5A7ABA1B0DD5330038CE09 /* ExampleAutoHeightItem.h */,
+				8D5A7ABB1B0DD5330038CE09 /* ExampleAutoHeightItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +426,7 @@
 				30D1C7D617AC08F4001F731C /* First_Alt@2x.png in Resources */,
 				30D1C7D717AC08F4001F731C /* Last_Alt@2x.png in Resources */,
 				30D1C7D817AC08F4001F731C /* Middle_Alt@2x.png in Resources */,
+				8D5A7AB91B0DD4E70038CE09 /* ExampleAutoHeightCell.xib in Resources */,
 				50359B2219D2BF8C00559B3E /* Default-736h@3x.png in Resources */,
 				30D1C7D917AC08F4001F731C /* Single_Alt@2x.png in Resources */,
 				3079756617B3FD4600A58A71 /* Heart@2x.png in Resources */,
@@ -471,9 +490,12 @@
 				30FE4147176A306600F317B8 /* StylingViewController.m in Sources */,
 				303D966B17B7CCF800A418F3 /* XIBTestCell.m in Sources */,
 				303D967217B7CDE300A418F3 /* XIBTestViewController.m in Sources */,
+				8D5A7AB81B0DD4E70038CE09 /* ExampleAutoHeightCell.m in Sources */,
+				8D5A7ABF1B0DD6AE0038CE09 /* DynamicHeightController.m in Sources */,
 				30E5F50C17BBD163005CF1FE /* IndexedListViewController.m in Sources */,
 				30BB805B17E0D8C300AD0861 /* XIBTestItem.m in Sources */,
 				30B00D7A17C667A90010D439 /* ValidationsViewController.m in Sources */,
+				8D5A7ABC1B0DD5330038CE09 /* ExampleAutoHeightItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

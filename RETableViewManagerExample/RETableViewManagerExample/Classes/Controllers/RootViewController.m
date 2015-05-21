@@ -15,7 +15,7 @@
 #import "XIBTestViewController.h"
 #import "IndexedListViewController.h"
 #import "ValidationsViewController.h"
-
+#import "DynamicHeightController.h"
 @interface RootViewController ()
 
 @property (strong, readwrite, nonatomic) RETableViewManager *manager;
@@ -78,6 +78,11 @@
     [section addItem:[RETableViewItem itemWithTitle:@"Validations" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         [weakSelf.navigationController pushViewController:[[ValidationsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+    }]];
+    
+    [section addItem:[RETableViewItem itemWithTitle:@"Dynamic Height" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+        [item deselectRowAnimated:YES];
+        [weakSelf.navigationController pushViewController:[[DynamicHeightController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
     }]];
 }
 

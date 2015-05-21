@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'RETableViewManager'
-  s.version     = '1.5.14'
+  s.version     = '1.6'
   s.authors     = { 'Roman Efimov' => 'romefimov@gmail.com' }
   s.homepage    = 'https://github.com/romaonthego/RETableViewManager'
   s.summary     = 'Powerful data driven content manager for UITableView.'
@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'REFormattedNumberField', '~> 1.1.5'
   s.dependency 'REValidation', '~> 0.1.4'
+  s.dependency 'UITableView+FDTemplateLayoutCell', '~> 1.2'
 end

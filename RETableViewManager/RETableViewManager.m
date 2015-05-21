@@ -129,6 +129,8 @@
     if ([bundle pathForResource:identifier ofType:@"nib"]) {
         self.registeredXIBs[identifier] = objectClass;
         [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:bundle] forCellReuseIdentifier:objectClass];
+        [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:bundle] forCellReuseIdentifier:identifier];
+
     }
 }
 
