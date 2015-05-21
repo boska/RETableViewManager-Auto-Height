@@ -5,6 +5,56 @@ __Powerful data driven content manager for UITableView.__
 https://github.com/forkingdog/UITableView-FDTemplateLayoutCell   
 auto-cell-height with RETableViewManager with  UITableView-FDTemplateLayoutCell   
 
+# Example For Auto Height Cell
+```
+#import "ExampleAutoHeightCell.h"
+
+@implementation ExampleAutoHeightCell
+@dynamic item;
+-(void)cellDidLoad{
+    [super cellDidLoad];
+}
+-(void)cellWillAppear{
+    [super cellWillAppear];
+    self.longStringLabel.text = self.item.longString;
+}
+//no need for + (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager
+@end
+
+```
+```
+
+#import "DynamicHeightController.h"
+#import <RETableViewManager.h>
+#import "ExampleAutoHeightItem.h"
+@interface DynamicHeightController ()
+@property (nonatomic,strong) RETableViewManager *manager;
+@end
+
+@implementation DynamicHeightController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
+    self.manager[@"ExampleAutoHeightItem"]= @"ExampleAutoHeightCell";
+
+    RETableViewSection *section = [RETableViewSection section];
+    ExampleAutoHeightItem *item = [ExampleAutoHeightItem item];
+    item.cellIdentifier = @"ExampleAutoHeightCell";
+    item.longString = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    item.cellHeight = UITableViewAutomaticDimension;
+    [section addItem:item];
+    
+    [self.manager addSection:section];
+    
+    [self.manager.tableView reloadData];
+}
+@end
+
+```
+
+<img src="http://i.imgur.com/1reRqSw.png" width="320" height="568" />
+
 `RETableViewManager` allows to manage the content of any `UITableView` with ease, both forms and lists. `RETableViewManager` is built on top of reusable cells technique and provides APIs for mapping any object class to any custom cell subclass.
 
 The general idea is to allow developers to use their own `UITableView` and `UITableViewController` instances (and even subclasses), providing a layer that synchronizes data with the cell appereance.
@@ -362,6 +412,10 @@ RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Test"
 
 
 ```
+
+##Result
+
+![alt text](http://i.imgur.com/1reRqSw.png "demo")
 
 ### Float Item (UISlider) Example
 
