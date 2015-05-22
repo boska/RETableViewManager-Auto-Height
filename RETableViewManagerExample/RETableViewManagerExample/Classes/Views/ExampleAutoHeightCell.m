@@ -17,4 +17,5 @@
     [super cellWillAppear];
     self.longStringLabel.text = self.item.longString;
 }
+//no need for + (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager
 @end

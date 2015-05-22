@@ -19,7 +19,6 @@
     [super viewDidLoad];
     self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     self.manager[@"ExampleAutoHeightItem"]= @"ExampleAutoHeightCell";
-    //[self.tableView registerNib:[UINib nibWithNibName:@"ExampleAutoHeightCell" bundle:nil] forCellReuseIdentifier:@"ExampleAutoHeightCell"];
 
     RETableViewSection *section = [RETableViewSection section];
     ExampleAutoHeightItem *item = [ExampleAutoHeightItem item];
@@ -31,10 +30,5 @@
     [self.manager addSection:section];
     
     [self.manager.tableView reloadData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 @end
