@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
-  s.name        = 'RETableViewManager'
-  s.version     = '1.6'
-  s.authors     = { 'Roman Efimov' => 'romefimov@gmail.com' }
-  s.homepage    = 'https://github.com/romaonthego/RETableViewManager'
-  s.summary     = 'Powerful data driven content manager for UITableView.'
-  s.source      = { :git => 'https://github.com/romaonthego/RETableViewManager.git',
+  s.name        = 'RETableViewManager-FDTemplateLayoutCell'
+  s.version     = '0.0.1'
+  s.authors     = { 'Lee Cheng-Yang' => 'mr.boska@gmail.com' }
+  s.homepage    = 'https://github.com/boska/RETableViewManager-FDTemplateLayoutCell'
+  s.summary     = 'Combine RETableViewManager and FDTemplateLayoutCell'
+  s.source      = { :git => 'https://github.com/boska/RETableViewManager-FDTemplateLayoutCell.git',
                     :tag => s.version.to_s }
   s.license     = { :type => "MIT", :file => "LICENSE" }
 
